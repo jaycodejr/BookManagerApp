@@ -1,0 +1,58 @@
+﻿@model BookManager.Web.ViewModels.Books.EditBookViewModel;
+
+@{
+    ViewData["Title"] = "Edit Book";
+}
+
+<div class="container p-4">
+    <div class="row pb-2">
+        <form asp-action="Edit" method="post" class="col-md-6 ms-auto me-auto border border-primary p-3">
+            <h4>Edit Book</h4>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-2"></div>
+            <div class="mb-2">
+                <label asp-for="Title" class="col-form-label"></label>
+                <input class="form-control" asp-for="Title" />
+                <span class="text-danger" asp-validation-for="Title"></span>
+            </div>
+            <div class="mb-2">
+                <label asp-for="CategoryId" class="col-form-label"></label>
+                <select class="form-control" asp-for="CategoryId"
+                        asp-items="@(new SelectList(Model.CategoryList, "Id", "Name"))">
+                    <option>---</option>
+                </select>
+                <span class="text-danger" asp-validation-for="CategoryId"></span>
+            </div>
+            <div class="mb-2">
+                <label asp-for="AuthorId" class="col-form-label"></label>
+                <select class="form-control" asp-for="AuthorId"
+                        asp-items="@(new SelectList(Model.AuthorList, "Id", "Name"))">
+                    <option>---</option>
+                </select>
+                <span class="text-danger" asp-validation-for="AuthorId"></span>
+            </div>
+            <div class="mb-2">
+                <label asp-for="Description" class="col-form-label"></label>
+                <textarea class="form-control" asp-for="Description"></textarea>
+            </div>
+            <div class="mb-2">
+                <label asp-for="TotalPage" class="col-form-label"></label>
+                <input class="form-control" asp-for="TotalPage" min="1" />
+                <span class="text-danger" asp-validation-for="TotalPage"></span>
+            </div>
+            <div class="mb-2">
+                <label asp-for="PublishedDate" class="col-form-label"></label>
+                <input class="form-control" asp-for="PublishedDate" />
+                <span class="text-danger" asp-validation-for="PublishedDate"></span>
+            </div>
+
+            <button class="btn btn-sm btn-success" type="submit"><i class="bi bi-save-fill"></i>&nbsp;Save</button>
+            <a asp-controller="Books" asp-action="Index" class="btn btn-sm btn-light"><i class="bi bi-arrow-left-circle-fill"></i>&nbsp;Back to List</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial"></partial>
+}
+

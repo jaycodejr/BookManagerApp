@@ -1,0 +1,14 @@
+C:\Users\makame.juma\source\projects\AspDotNet\BookManagerApp\BookManager.Domain\bin\Debug\net6.0\BookManager.Domain.deps.json
+C:\Users\makame.juma\source\projects\AspDotNet\BookManagerApp\BookManager.Domain\bin\Debug\net6.0\BookManager.Domain.dll
+C:\Users\makame.juma\source\projects\AspDotNet\BookManagerApp\BookManager.Domain\bin\Debug\net6.0\BookManager.Domain.pdb
+C:\Users\makame.juma\source\projects\AspDotNet\BookManagerApp\BookManager.Domain\obj\Debug\net6.0\BookManager.Domain.csproj.AssemblyReference.cache
+C:\Users\makame.juma\source\projects\AspDotNet\BookManagerApp\BookManager.Domain\obj\Debug\net6.0\BookManager.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\makame.juma\source\projects\AspDotNet\BookManagerApp\BookManager.Domain\obj\Debug\net6.0\BookManager.Domain.AssemblyInfoInputs.cache
+C:\Users\makame.juma\source\projects\AspDotNet\BookManagerApp\BookManager.Domain\obj\Debug\net6.0\BookManager.Domain.AssemblyInfo.cs
+C:\Users\makame.juma\source\projects\AspDotNet\BookManagerApp\BookManager.Domain\obj\Debug\net6.0\BookManager.Domain.csproj.CoreCompileInputs.cache
+C:\Users\makame.juma\source\projects\AspDotNet\BookManagerApp\BookManager.Domain\obj\Debug\net6.0\BookManager.Domain.dll
+C:\Users\makame.juma\source\projects\AspDotNet\BookManagerApp\BookManager.Domain\obj\Debug\net6.0\refint\BookManager.Domain.dll
+C:\Users\makame.juma\source\projects\AspDotNet\BookManagerApp\BookManager.Domain\obj\Debug\net6.0\BookManager.Domain.pdb
+C:\Users\makame.juma\source\projects\AspDotNet\BookManagerApp\BookManager.Domain\obj\Debug\net6.0\ref\BookManager.Domain.dll
+C:\Users\makame.juma\source\projects\AspDotNet\BookManagerApp\BookManager.Domain\bin\Debug\net6.0\BookManager.Domain.runtimeconfig.json
+C:\Users\makame.juma\source\projects\AspDotNet\BookManagerApp\BookManager.Domain\obj\Debug\net6.0\BookManager.Domain.genruntimeconfig.cache

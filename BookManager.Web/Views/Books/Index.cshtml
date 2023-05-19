@@ -1,0 +1,52 @@
+﻿@model IEnumerable<BookManager.Domain.Models.Book>
+@{
+    ViewData["Title"] = "Book List";
+}
+
+
+
+<div class="container p-4">
+    <div class="row pb-2">        
+        <div class="col-md-10 ms-auto me-auto border border-primary p-3">
+            <div class="d-flex justify-content-between">
+                <h5>Book List</h5>
+                <a asp-controller="Books" asp-action="Create" class="btn btn-sm btn-primary"><i class="bi bi-plus-circle-fill"></i>&nbsp;New Book</a>
+            </div>
+            <hr />
+            <table class="table table-sm table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Total Pages</th>
+                        <th>Author</th>
+                        <th>Published On</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var book in Model)
+                    {
+                        <tr>
+                            <td>@book.Title</td>
+                            <td>@book.Category.Name</td>
+                            <td>@book.ToTalPage</td>
+                            <td>@book.Author.Name</td>
+                            <td>@book.PublishedDate.ToString("dd/MM/yyyy")</td>
+                            <td>
+                                <div class="w-100">
+                                    <a asp-controller="Books" asp-action="Details" asp-route-id="@book.Id" class="btn btn-sm btn-secondary"><i class="bi bi-eye"></i>&nbsp;View</a>
+                                    <a asp-controller="Books" asp-action="Edit" asp-route-id="@book.Id" class="btn btn-sm btn-info"><i class="bi bi-pencil-square"></i>&nbsp;Edit</a>
+                                    <a asp-controller="Books" asp-action="Delete" asp-route-id="@book.Id" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i>&nbsp;Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

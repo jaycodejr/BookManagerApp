@@ -1,0 +1,41 @@
+﻿@model IEnumerable<BookManager.Domain.Models.Category>;
+@{
+    ViewData["Title"] = "Categories List";
+}
+
+<div class="container p-4">
+    <div class="row pb-2">
+        <div class="col-md-10 ms-auto me-auto border border-primary p-3">
+            <div class="d-flex justify-content-between">
+                <h5>Category List</h5>
+                <a asp-controller="Categories" asp-action="Create" class="btn btn-sm btn-primary"><i class="bi bi-plus-circle-fill"></i>&nbsp;New Category</a>
+            </div>
+            <hr />
+            <table class="table table-sm table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Total Books</th>
+                        <th width="20%"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var category in Model)
+                    {
+                        <tr>
+                            <td>@category.Name</td>
+                            <td>@category.Books?.Count</td>
+                            <td>
+                                <div class="w-100">
+                                    <a asp-controller="Categories" asp-action="Edit" asp-route-id="@category.Id" class="btn btn-sm btn-info"><i class="bi bi-pencil-square"></i>&nbsp;Edit</a>
+                                    <a asp-controller="Categories" asp-action="Delete" asp-route-id="@category.Id" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i>&nbsp;Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

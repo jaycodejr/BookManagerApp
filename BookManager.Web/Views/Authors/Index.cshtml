@@ -1,0 +1,46 @@
+﻿@model IEnumerable<BookManager.Domain.Models.Author>
+@{
+    ViewData["Title"] = "Authors List";
+}
+
+<div class="container p-4">
+    <div class="row pb-2">
+        <div class="col-md-10 ms-auto me-auto border border-primary p-3">
+            <div class="d-flex justify-content-between">
+                <h5>Authors List</h5>
+                <a asp-controller="Authors" asp-action="Create" class="btn btn-sm btn-primary"><i class="bi bi-plus-circle-fill"></i>&nbsp;New Author</a>
+            </div>
+            <hr />
+            <table class="table table-sm table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Total Books</th>
+                        <th width="30%"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var author in Model)
+                    {
+                        <tr>
+                            <td>@author.Name</td>
+                            <td>@author.Email</td>
+                            <td>@author.PhoneNumber</td>
+                            <td>@author.Books?.Count</td>
+                            <td>
+                                <div class="w-100">
+                                    <a asp-controller="Authors" asp-action="Details" asp-route-id="@author.Id" class="btn btn-sm btn-secondary"><i class="bi bi-eye"></i>&nbsp;View</a>
+                                    <a asp-controller="Authors" asp-action="Edit" asp-route-id="@author.Id" class="btn btn-sm btn-info"><i class="bi bi-pencil-square"></i>&nbsp;Edit</a>
+                                    <a asp-controller="Authors" asp-action="Delete" asp-route-id="@author.Id" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i>&nbsp;Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
